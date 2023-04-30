@@ -1,0 +1,23 @@
+function fibo(n : int) : int =
+(
+    let 
+      	var prev1 := 0
+        var prev2 := 1
+        var fib := 0
+        var i := 0
+    in
+        if n < 0 then   
+           fib := -1
+        else if n = 1 then 
+            fib := 1
+        else 
+            while i < n do
+            (
+			fib := prev1 + prev2;
+               	prev2 := prev1;
+           		prev1 := fib;
+               	i := i+1
+            );
+        fib
+    end
+)

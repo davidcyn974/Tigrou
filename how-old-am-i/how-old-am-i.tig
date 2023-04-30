@@ -1,0 +1,10 @@
+let
+  function main(): int =
+    (
+      print_int(42);
+      print("\n");
+      0
+    )
+in
+  main()
+end

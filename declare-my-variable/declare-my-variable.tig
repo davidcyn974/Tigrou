@@ -1,0 +1,6 @@
+let
+    var truc := "My printed variable"
+in
+    print(truc);
+    print("\n")
+end

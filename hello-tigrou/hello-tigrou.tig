@@ -1,0 +1,9 @@
+let
+    function main(): int =
+        (
+            print("Hi Tigrou!\n");
+            0
+        )
+in
+    main()
+end

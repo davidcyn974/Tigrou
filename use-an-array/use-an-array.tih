@@ -1,0 +1,22 @@
+type int_array = array of int
+
+function max_search(arr: int_array, size: int): int =
+(
+let
+	var pos := 0
+in
+    if size <= 0 then
+        pos := -1
+
+ else
+  
+    for i := 0 to size -1 do
+    (
+        if arr[i] > arr[pos] then
+        (
+            pos:= i
+        )
+    );
+  pos
+end
+)

@@ -1,0 +1,45 @@
+type int_array = array of int
+
+function find_min_index(a: int_array, start: int, size: int): int =
+(
+let
+	var min_index := start
+in
+    for i := start+1 to size-1 do
+    (
+	if a[i] < a[min_index] then
+	(
+            min_index := i
+
+	 )
+    );
+        
+ min_index
+ end
+    )
+
+function sort(a: int_array, size: int) =
+(
+let
+	var min_index := 0
+	var tmp := 0
+
+in
+
+if size > 2 then
+(
+    for i := 0 to size-2 do
+    (
+        min_index := find_min_index(a, i, size);
+        if min_index <> i then
+	(
+		tmp := a[i];
+            	a[i] := a[min_index];
+            	a[min_index] := tmp
+	)
+
+     )
+
+)
+end
+)	
